@@ -4,6 +4,7 @@ import Welcome from './components/welcome';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Contact from './pages/Contact';
 import About from './pages/About-me';
+import Profile from './pages/Profile';
 function App() {
   return (
     <div className="App">
@@ -21,12 +22,15 @@ function App() {
                 </li>
                 <li>
                   <Link to='/about'>About ME</Link>
+                </li><li>
+                  <Link to='/profile'>Profile</Link>
                 </li>
             </ul>
           </div>
           <Routes>
             <Route path='/contact' element={ <Contact />}/>
             <Route path='/about' element={ <About />}/>
+            <Route path='/profile/:name' element={ <Profile />}/>
 
           </Routes>
 
