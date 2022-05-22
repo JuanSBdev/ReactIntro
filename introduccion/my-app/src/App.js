@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Contact from './pages/Contact';
 import About from './pages/About-me';
 import Profile from './pages/Profile';
+import Semaforo from './pages/Semaforo';
 function App() {
   return (
     <div className="App">
@@ -22,8 +23,12 @@ function App() {
                 </li>
                 <li>
                   <Link to='/about'>About ME</Link>
-                </li><li>
+                </li>
+                <li>
                   <Link to='/profile'>Profile</Link>
+                </li>
+                <li>
+                  <Link to='/semaforo'>Semaforo</Link>
                 </li>
             </ul>
           </div>
@@ -31,7 +36,8 @@ function App() {
             <Route path='/contact' element={ <Contact />}/>
             <Route path='/about' element={ <About />}/>
             <Route path='/profile/:name' element={ <Profile />}/>
-
+            <Route path='/semaforo' element={ <Semaforo />}/>
+              
           </Routes>
 
         </Router>
